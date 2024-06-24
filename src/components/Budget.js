@@ -15,6 +15,7 @@ const Budget = () => {
         step="10"
         value={newBudget}
         onChange={ handleChange }
+        placeholder='0'
       />
     </div>
   );
