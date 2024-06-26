@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import ExpenseItem from './ExpenseItem';
-import { AppContextt } from '../context/AppContext';
+import { AppContext } from '../context/AppContext';
 
 
     const  ExpenseList =() => {
-    const { expense } = useContext(AppContextt);
+    const { expense } = useContext(AppContext);
 
     return (
         <table className='table'>

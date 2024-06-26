@@ -7,50 +7,29 @@ import Budget from './components/Budget';
 
 // Add code to import the other components here under
 import Remaining from './components/Remaining';
-import ExpenseTotal from './components/ExpenseTotal.js'
-
-
-import { AppProvider } from './context/AppContext';
+import ExpenseTotal from './components/ExpenseTotal';
+import ExpenseList from './components/ExpenseList';
+import ExpenseItem from './components/ExpenseItem';
+import Allocation from './components/AllocationForm';
+import {AppProvider} from './context/AppContext';
 const App = () => {
     return (
         <AppProvider>
             <div className='container'>
-                <h1 className='mt-3'>Company's Budget Allocation</h1>
-                    <div className='row mt-3'>
-                        {
-                            /* Add Budget component here */
-                            < Budget/> 
-                        }        
-
-                        {
-                            /* Add Remaining component here*/
-                            <div className='col-sm'>
-                                <Remaining />
-                            </div>
-                        }        
-
-                        {
-                            /* Add ExpenseTotal component here */
-                            <div className='col-sm'>
-                                <ExpenseTotal />
-                            </div>
-                        }        
-                       
-                        {
-                            /* Add ExpenseList component here */
-                        }         
-
-                        {
-                            /* Add ExpenseItem component here */
-                        }        
-
-                        {
-                            /* Add AllocationForm component here under */
-                        }        
-
+                <h1 classsName='mt-3'>
+                    Budgeted Planing List
+                </h1>
+                <div className='row mt-3'>
+                    { <Budget/>}
+                    { <Remaining/>}
+                    { <ExpenseTotal/>}
+                    { <ExpenseList/>}
+                    { <ExpenseItem/>}
+                    { <Allocation/>}
                 </div>
             </div>
         </AppProvider>
+        
     );
 };
 export default App;
